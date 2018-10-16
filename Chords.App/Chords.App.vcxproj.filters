@@ -21,6 +21,9 @@
     <ClInclude Include="Resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SDKDLL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -42,5 +45,12 @@
     <Image Include="app.ico">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="SDKDLL64.lib" />
+    <Library Include="SDKDLL.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SDKDLL.dll" />
   </ItemGroup>
 </Project>
