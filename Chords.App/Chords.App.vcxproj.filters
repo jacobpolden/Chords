@@ -47,10 +47,9 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="SDKDLL64.lib" />
-    <Library Include="SDKDLL.lib" />
+    <None Include="SDKDLL.dll" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="SDKDLL.dll" />
+    <Library Include="SDKDLL.lib" />
   </ItemGroup>
 </Project>
