@@ -4,7 +4,6 @@ namespace Chords.CoreApp
 {
     public class Program
     {
-
         public static void Main(string[] args)
         {
             CoolerMasterSdkWrapper.SetControlDevice(CoolerMasterSdkWrapper.DeviceIndex.DevMKeysSWhite);
@@ -12,7 +11,6 @@ namespace Chords.CoreApp
             Console.WriteLine(CoolerMasterSdkWrapper.IsDevicePlug());
 
             CoolerMasterSdkWrapper.EnableLedControl(true);
-            CoolerMasterSdkWrapper.RefreshLed(false);
 
             Console.WriteLine(CoolerMasterSdkWrapper.SetLedColor(3, 1, 255, 255, 255));
             CoolerMasterSdkWrapper.SetLedColor(3, 1, 0, 0, 0);

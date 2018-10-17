@@ -4,14 +4,12 @@ namespace Chords.CoreApp
 {
     public static class CoolerMasterSdkWrapper
     {
+        private const int MaxLedRow = 7;
+        private const int MaxLedColumn = 24;
+        private const string SdkDll = @"SDKDLL.dll";
+
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
         public delegate void KeyCallback(int iRow, int iColumn, [MarshalAs(UnmanagedType.I1)] bool bPressed);
-
-        public const int MaxLedRow = 7;
-
-        public const int MaxLedColumn = 24;
-
-        public const string SdkDll = @"SDKDLL.dll";
 
         [DllImport(SdkDll, EntryPoint = "SetControlDevice")]
         public static extern void SetControlDevice(DeviceIndex devIndex);
@@ -70,22 +68,8 @@ namespace Chords.CoreApp
 
         public enum DeviceIndex
         {
-            DevMKeysL = 0,
-            DevMKeysS = 1,
-            DevMKeysLWhite = 2,
-            DevMKeysMWhite = 3,
-            DevMMouseL = 4,
-            DevMMouseS = 5,
-            DevMKeysM = 6,
             DevMKeysSWhite = 7,
-            DevMm520 = 8,
-            DevMm530 = 9,
-            DevMk750 = 10,
-            DevCk372 = 11,
-            DevCk550552 = 12,
-            DevCk551 = 13,
             DevDefault = 0xFFFF
-
         }
     }
 }
